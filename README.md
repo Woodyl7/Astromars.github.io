@@ -1,3 +1,27 @@
+# Complete GitHub Markdown Reference Guide
+
+A comprehensive guide to GitHub Flavored Markdown (GFM) with examples and best practices.
+
+## Table of Contents
+
+- [Headers](#headers)
+- [Text Formatting](#text-formatting)
+- [Lists](#lists)
+- [Links](#links)
+- [Images](#images)
+- [Code](#code)
+- [Tables](#tables)
+- [Blockquotes](#blockquotes)
+- [Horizontal Rules](#horizontal-rules)
+- [GitHub-Specific Features](#github-specific-features)
+- [Advanced Features](#advanced-features)
+- [Best Practices](#best-practices)
+
+## Headers
+
+Use `#` for headers. More `#` means smaller header.
+
+```markdown
 # H1 Header
 ## H2 Header
 ### H3 Header
@@ -484,3 +508,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 | Horizontal rule | `---` |
 
 ---
+
+*This guide covers the most commonly used Markdown features on GitHub. For more advanced features and the latest updates, refer to the official GitHub documentation.*

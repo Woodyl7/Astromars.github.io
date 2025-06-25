@@ -2,6 +2,248 @@
 
 A comprehensive guide to GitHub Flavored Markdown (GFM) with examples and best practices.
 
+## Jekyll Configuration File (_config.yml)
+
+Before diving into the markdown guide, here's the complete `_config.yml` file for setting up this guide as a Jekyll site on GitHub Pages:
+
+```yaml
+# Site Settings
+title: "GitHub Markdown Reference Guide"
+description: "A comprehensive guide to GitHub Flavored Markdown (GFM) with examples and best practices"
+author: "Your Name"
+email: "your.email@example.com"
+url: "https://yourusername.github.io"
+baseurl: "/markdown-guide" # Change this to your repository name
+
+# Site Configuration
+lang: en-US
+timezone: UTC
+
+# GitHub Pages / Jekyll Settings
+github_username: yourusername
+repository: yourusername/markdown-guide
+
+# Theme Configuration
+theme: minima
+# Alternative popular themes:
+# theme: jekyll-theme-minimal
+# theme: jekyll-theme-cayman
+# theme: jekyll-theme-slate
+# remote_theme: pages-themes/minimal@v0.2.0
+
+# Markdown Processing
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+
+# Plugin Settings
+relative_links:
+  enabled: true
+  collections: true
+
+optional_front_matter:
+  remove_originals: true
+
+readme_index:
+  enabled: true
+  remove_originals: false
+  with_frontmatter: false
+
+titles_from_headings:
+  enabled: true
+  strip_title: true
+  collections: true
+
+# SEO Settings
+twitter:
+  username: yourtwitterhandle
+  card: summary
+
+social:
+  name: Your Name
+  links:
+    - https://twitter.com/yourtwitterhandle
+    - https://github.com/yourusername
+    - https://linkedin.com/in/yourprofile
+
+# Google Analytics (optional)
+# google_analytics: UA-NNNNNNNN-N
+
+# Navigation
+header_pages:
+  - index.md
+  - about.md
+  - contributing.md
+
+# Collections (if you want to organize content)
+collections:
+  guides:
+    output: true
+    permalink: /:collection/:name/
+  examples:
+    output: true
+    permalink: /:collection/:name/
+
+# Default layouts for different content types
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Your Name"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: "guide"
+
+# Build Settings
+safe: true
+source: .
+destination: ./_site
+incremental: false
+regenerate: true
+
+# Conversion
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Filtering Content
+show_excerpts: true
+excerpt_separator: "<!--more-->"
+
+# Pagination
+paginate: 10
+paginate_path: "/page:num/"
+
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+    tag: '/tag/:name/'
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .gitignore
+  - README.md
+  - LICENSE
+  - package.json
+  - package-lock.json
+  - gulpfile.js
+  - webpack.config.js
+  - .eslintrc.js
+  - .prettierrc
+  - yarn.lock
+
+# Include files that start with underscore
+include:
+  - _pages
+  - .htaccess
+
+# Sass/SCSS Configuration
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# GitHub Pages specific settings
+github: [metadata]
+
+# Custom variables (you can reference these in your templates)
+custom:
+  version: "1.0.0"
+  last_updated: "2025-06-25"
+  github_repo_url: "https://github.com/yourusername/markdown-guide"
+  
+# Footer links
+footer_links:
+  - title: "GitHub"
+    url: "https://github.com/yourusername"
+    icon: "fab fa-github"
+  - title: "Twitter"
+    url: "https://twitter.com/yourtwitterhandle"
+    icon: "fab fa-twitter"
+  - title: "Email"
+    url: "mailto:your.email@example.com"
+    icon: "fas fa-envelope"
+
+# Comments (using Disqus)
+disqus:
+  shortname: your-disqus-shortname
+
+# Search functionality
+search:
+  enabled: true
+  provider: lunr
+
+# Contact form (for static sites)
+contact:
+  email: your.email@example.com
+  subject_prefix: "[Markdown Guide Contact] "
+
+# Feature flags
+features:
+  dark_mode: true
+  search: true
+  comments: true
+  analytics: false
+
+# Development settings (ignored in production)
+livereload: true
+incremental: true
+profile: false
+```
+
+### Setup Instructions for Jekyll/GitHub Pages:
+
+1. **Create the _config.yml file** in your repository root with the above content
+2. **Replace placeholder values:**
+   - `yourusername` → your GitHub username
+   - `your.email@example.com` → your email address
+   - `Your Name` → your actual name
+   - Social media handles and URLs
+3. **Enable GitHub Pages** in your repository settings
+4. **Choose a theme** by uncommenting your preferred option
+5. **Customize features** like analytics, comments, and social links
+
+---
+
 ## Table of Contents
 
 - [Headers](#headers)
